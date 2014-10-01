@@ -1,4 +1,5 @@
 class Listing < ActiveRecord::Base
-  attr_accessible :name
-  has_and_belongs_to_many :users
+  attr_accessible :name, :photo
+  belongs_to :users
+  mount_uploader :photo, PhotoUploader
 end
