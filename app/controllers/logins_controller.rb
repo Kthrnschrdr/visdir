@@ -18,7 +18,7 @@ class LoginsController < ApplicationController
   helper_method :current_user
   
   def destroy
-    session[:user_id] = nil 
+    session[:user_id] = nil fav.png
     redirect_to listings_path
   end
   
