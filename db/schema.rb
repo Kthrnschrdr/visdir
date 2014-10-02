@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141001161054) do
+ActiveRecord::Schema.define(:version => 20141002030631) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0, :null => false
@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(:version => 20141001161054) do
     t.string   "location"
     t.string   "budget"
     t.boolean  "pro_status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+    t.string   "email"
   end
 
 end
