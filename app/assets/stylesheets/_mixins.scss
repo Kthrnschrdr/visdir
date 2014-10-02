@@ -1,8 +1,0 @@
-@mixin image_replacement($image_url, $width, $height){
-  display: block;
-  background: url($image_url) no-repeat;
-  width: $width;
-  height: 0;
-  padding-top: $height;
-  overflow: hidden;
-}
