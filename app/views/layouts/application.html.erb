@@ -6,9 +6,35 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+  <div id="header">
+    <h1 id="header-logo"><a href="#">VisDir</a></h1>
+  
+    <nav id="header-nav">
+      <ul id="header-nav-ul">
+        <li><a href="#" class="header-nav-link">Favs</a></li>
+        <li><a href="#" class="header-nav-link">About</a></li>
+      </ul>
+    </nav>
+  
+    <div id="header-account">
+      <div id="header-account-label">Photographers</div>
+    
+      <ul id="header-account-ul">
+        <li id="header-account-login"><a href="#">Log in</a> or</li>
+        <li id="header-account-signup"><a href="#">Sign up</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
 <body>
 
 <%= yield %>
 
 </body>
+<footer>
+  <div id="footer">
+    <a href="#">VisDir</a>
+  </div>
+</footer>
 </html>
