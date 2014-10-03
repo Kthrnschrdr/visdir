@@ -23,10 +23,15 @@ class ListingsController < ApplicationController
   
   def new
     @listing = Listing.new
+    @names = []
+    Listing.all.each do |l|
+      @names << l.name
+    end
   end
   
   def create
     @listing = Listing.new(params[:listing])
+    @listing.user_id = current_user.id
     if @listing.save
       redirect_to listings_path
     else
