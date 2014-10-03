@@ -23,13 +23,12 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    @user.build_listing
   end
   
   def create
-    @user = User.new(params[:listing])
+    @user = User.new(params[:user])
     if @user.save
-      redirect_to users_path
+      redirect_to new_listing_path
     else
       render "new"
     end
