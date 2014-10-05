@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      UserMailer.delay.welcome_email(@user).deliver
+      UserMailer.welcome_email(@user).deliver
       redirect_to new_listing_path
     else
       render "new"
