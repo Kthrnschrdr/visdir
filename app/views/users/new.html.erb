@@ -1,10 +1,10 @@
   <h2>New User</h2>
-  <%= form_for @user, :url => create_user_path do |u| %>
-	  <p><%= u.text_field :name, :placeholder => "Name" %></p>
-  	  <p><%= u.text_field :email, :placeholder => "Email" %></p>
- 	  <p><%= u.password_field :password, :placeholder => "Password" %></p>
-  	  <p><%= u.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
-  	  <p><%= u.submit "Signup", :class => 'submit' %></p>
+  <%= form_for @user do |f| %>
+	  <p><%= f.text_field :name, :placeholder => "Name" %></p>
+  	  <p><%= f.text_field :email, :placeholder => "Email" %></p>
+ 	  <p><%= f.password_field :password, :placeholder => "Password" %></p>
+  	  <p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
+  	  <p><%= f.submit "Signup", :class => 'submit' %></p>
   		<% if flash[:notice] %>
       	<p id="notice"><%= flash[:notice] %></p>
     	<% end %>
