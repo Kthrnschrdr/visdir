@@ -1,7 +1,20 @@
 class ListingsController < ApplicationController
   
   def index
-    @listings = Listing.all     
+    @listings = Listing.all
+    @categories = []
+    Listing.all.each do |l|
+      @categories << l.name
+    end   
+    @budgets = []
+    Listing.all.each do |l|
+      @budgets << l.budget
+    end 
+    @locations = []
+    Listing.all.each do |l|
+      @locations << l.location
+    end 
+      
   end
   
   def show
@@ -23,10 +36,6 @@ class ListingsController < ApplicationController
   
   def new
     @listing = Listing.new
-    @names = []
-    Listing.all.each do |l|
-      @names << l.name
-    end
   end
   
   def create
