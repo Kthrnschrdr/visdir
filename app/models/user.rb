@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   has_secure_password
   
-  attr_accessible :name, :pro_status, :email, :password, :password_confirmation
+  attr_accessible :name, :pro_status, :email, :password, :password_confirmation, :website, :twitter
   has_many :listings
   
   accepts_nested_attributes_for :listings, :allow_destroy => true# , :reject_if => :listing_is_blank

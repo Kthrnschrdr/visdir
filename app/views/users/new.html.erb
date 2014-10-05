@@ -1,14 +1,18 @@
-  <h2>New User</h2>
-  <%= form_for @user do |f| %>
-	  <p><%= f.text_field :name, :placeholder => "Name" %></p>
-  	  <p><%= f.text_field :email, :placeholder => "Email" %></p>
- 	  <p><%= f.password_field :password, :placeholder => "Password" %></p>
-  	  <p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
-  	  <p><%= f.submit "Signup", :class => 'submit' %></p>
-  		<% if flash[:notice] %>
-      	<p id="notice"><%= flash[:notice] %></p>
-    	<% end %>
-    	<% if flash[:alert] %>
-      	<p id="alert"><%= flash[:alert] %></p>
-    	<% end %>
-  <% end %>
+<center>
+<h2>New User</h2>
+<%= form_for @user do |f| %>
+  <p><%= f.text_field :name, :placeholder => "Name" %></p>
+  <p><%= f.text_field :email, :placeholder => "Email" %></p>
+  <p><%= f.text_field :website, :placeholder => "Website" %></p>
+  <p><%= f.text_field :twitter, :placeholder => "Twitter" %></p>
+  <p><%= f.password_field :password, :placeholder => "Password" %></p>
+  <p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
+  <p><%= f.submit "Signup", :class => 'submit' %></p>
+  	<% if flash[:notice] %>
+   	<p id="notice"><%= flash[:notice] %></p>
+   	<% end %>
+  	<% if flash[:alert] %>
+  	<p id="alert"><%= flash[:alert] %></p>
+ 	<% end %>
+<% end %>
+</center>
