@@ -53,7 +53,8 @@
           <div class="card-details-budget"><%= l.budget %></div>
         </div>
       </div>
-	  <% else l.user == User.where(:pro_status => false) %>
+	  
+	<% else l.user == User.where(:pro_status => false) %>
     
       <div class="card">
         <a href="#" class="card-fav">Remove from Favs</a>
