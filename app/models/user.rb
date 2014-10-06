@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :listings, :allow_destroy => true# , :reject_if => :listing_is_blank
   
   validates :name, presence: true
-  validates :email,  presence: true, uniqueness: true
+  # validates :email,  presence: true, uniqueness: true
   validates :password, presence: true , confirmation: true
   validates :password_confirmation, presence: true
 

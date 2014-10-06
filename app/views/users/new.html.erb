@@ -7,6 +7,7 @@
   <p><%= f.text_field :twitter, :placeholder => "Twitter" %></p>
   <p><%= f.password_field :password, :placeholder => "Password" %></p>
   <p><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></p>
+  <p><%= f.check_box :pro_status %> PAY TO BE A PRO</p>
   <p><%= f.submit "Signup", :class => 'submit' %></p>
   	<% if flash[:notice] %>
    	<p id="notice"><%= flash[:notice] %></p>
