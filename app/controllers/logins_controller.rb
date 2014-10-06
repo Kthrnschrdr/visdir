@@ -7,7 +7,7 @@ class LoginsController < ApplicationController
     @user = User.find_by_email(params[:email])    
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to tasks_path
+      redirect_to listings_path
     else
       redirect_to login_path, :alert => "Invalid Login"
     end

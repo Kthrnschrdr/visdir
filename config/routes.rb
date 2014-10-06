@@ -1,7 +1,7 @@
 Visdir::Application.routes.draw do
   root to: 'listings#index'
 
-  get "email" => 'users#email', :as => "email"
+  # get "email" => 'users#email', :as => "email"
   get "signup" => 'users#new', :as => "signup"
   post "create_user" => 'users#create', :as => "create_user"
   
