@@ -38,4 +38,6 @@ gem 'unicorn'
 # To use debugger
 # gem 'debugger'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'delayed_job_active_record'
