@@ -37,7 +37,7 @@
     </div>
 	
   <% @listings.each do |l| %>
-    <% if l.user == User.where(:pro_status => true) %>
+    <% if l.user.pro_status == true %>
     <div id="cards">
       <div class="card card-pro">
         <a href="#" class="card-fav">Add to Favs</a>
