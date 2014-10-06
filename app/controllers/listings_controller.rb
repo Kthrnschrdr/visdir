@@ -13,8 +13,7 @@ class ListingsController < ApplicationController
     @locations = []
     Listing.all.each do |l|
       @locations << l.location
-    end 
-      
+    end     
   end
   
   def show
@@ -40,7 +39,7 @@ class ListingsController < ApplicationController
   
   def create
     @listing = Listing.new(params[:listing])
-    @listing.user = current_user.id
+    @listing.user = current_user
     if @listing.save
       redirect_to listings_path
     else

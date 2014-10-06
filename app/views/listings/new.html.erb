@@ -1,15 +1,4 @@
 <center>
-<%= form_for @listing do |f| %>
-<p><%= f.text_field :name, :placeholder => "Photo Category Name" %></p>
-<p><%= f.text_field :location, :placeholder => "Location" %></p>
-<p><%= f.text_field :budget, :placeholder => "Budget" %></p>
-<p><%= f.file_field :photo %></p>
-<p><%= f.submit "Create Listing" %></p>
-  	<% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-    <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
-<% end %>
+<h1>New Listing</h1>
+<%= render "form" %>
 </center>

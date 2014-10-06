@@ -37,13 +37,13 @@
     </div>
 	
   <% @listings.each do |l| %>
-    <% if l.user == User.where(:pro_status => true)  %>
+    <% if l.user == User.where(pro_status: true) %>
     <div id="cards">
       <div class="card card-pro">
         <a href="#" class="card-fav">Add to Favs</a>
       
         <div class="card-preview">
-          <a href="/listing/<%= l.id %>"><img src="http://placekitten.com/g/200/180"></a>
+          <a href="/listings/<%= l.id %>"><img src="http://placekitten.com/g/200/180"></a>
         </div>
     
         <h2 class="card-header"><a href="/listing/<%= l.id %>"><%= l.user %></a></h2>
@@ -54,15 +54,15 @@
         </div>
       </div>
 
-	<% else l.user == User.where(:pro_status => false) %>
+	<% else %>
     
       <div class="card">
         <a href="#" class="card-fav">Remove from Favs</a>
         
-        <h2 class="card-header"><a href="/listing/<%= l.id %>">S<%= l.name %></a></h2>
+        <h2 class="card-header"><a href="/listing/<%= l.id %>">S<%= l.user %></a></h2>
       
         <div class="card-preview">
-          <a href="/listing/<%= l.id %>"><img src="http://placekitten.com/g/200/180"></a>
+          <a href="/listings/<%= l.id %>"><img src="http://placekitten.com/g/200/180"></a>
         </div>
       
         <div class="card-details">

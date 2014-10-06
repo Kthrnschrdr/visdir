@@ -19,10 +19,15 @@
   
     <div id="header-account">
       <div id="header-account-label">Photographers</div>
-    
+	</ul>
+         <% if current_user != nil %>
       <ul id="header-account-ul">
-        <li id="header-account-login"><a href="#">Log in</a> or</li>
-        <li id="header-account-signup"><a href="#">Sign up</a></li>
+		<li><a href="logout">Log out</a></li>
+		 <% else %>
+        <li id="header-account-login"><a href="login">Log in</a> or</li>
+        <li id="header-account-signup"><a href="signup">Sign up</a></li>
+		 <% end %>
+		<li></li>
       </ul>
     </div>
   </div>
