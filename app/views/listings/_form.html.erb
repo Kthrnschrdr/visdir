@@ -1,8 +1,8 @@
 <center>
 <%= form_for @listing do |f| %>
-<p><%= f.text_field :name, :placeholder => "Photo Category Name" %></p>
+<p><%= f.select(:name, options_for_select([['Wedding','Wedding'],['Senior','Senior'], ['Real Estate', 'Real Estate']]), :prompt => "Category") %></p>
 <p><%= f.text_field :location, :placeholder => "Location" %></p>
-<p><%= f.text_field :budget, :placeholder => "Budget" %></p>
+<p><%= f.select(:budget, options_for_select([['High-Budget','High-Budget'],['Low-Budget','Low-Budget']]), :prompt => "Budget") %></p>
 <p><%= f.file_field :photo %></p>
 <p><%= f.submit "Create Listing" %></p>
   	<% if flash[:notice] %>
